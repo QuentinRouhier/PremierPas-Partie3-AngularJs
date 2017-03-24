@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="testCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+<body>
+  <div>
+    <p>{{ firstSentence | uppercase}}</p>
+    <p>{{ secondSentence | lowercase}}</p>
+  </div>
+  <script>
+  var testApp = angular.module('app',[]);
+
+  testApp.controller('testCtrl', function($scope){
+    $scope.firstSentence = 'L\'Axolotl, Ambystoma mexicanum, est une espèce d\'urodèles de la famille des Ambystomatidae.';
+    $scope.secondSentence = 'L\'ORNITHORYNQUE (ORNITHORHYNCHUS ANATINUS) EST UN ANIMAL SEMI-AQUATIQUE ENDÉMIQUE DE L\'EST DE L\'AUSTRALIE, Y COMPRIS LA TASMANIE.';
+  });
+  </script>
+</body>
+</html>
